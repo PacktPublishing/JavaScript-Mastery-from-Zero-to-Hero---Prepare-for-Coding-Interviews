@@ -1,0 +1,184 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Italic;}
+{\colortbl;\red255\green255\blue255;\red43\green53\blue116;\red0\green11\blue19;\red173\green173\blue173;
+\red212\green174\blue117;\red34\green158\blue53;\red27\green66\blue117;\red134\green78\blue169;\red28\green92\blue255;
+\red255\green235\blue173;\red236\green101\blue197;\red84\green114\blue192;}
+{\*\expandedcolortbl;;\cssrgb\c21961\c28235\c52941;\cssrgb\c0\c4706\c9412;\cssrgb\c73333\c73333\c73333;
+\cssrgb\c86667\c73333\c53333;\cssrgb\c13333\c66667\c26667;\cssrgb\c13333\c33333\c53333;\cssrgb\c60000\c40000\c72157;\cssrgb\c13333\c46667\c100000;
+\cssrgb\c100000\c93333\c73333;\cssrgb\c94902\c50196\c81569;\cssrgb\c40000\c53333\c80000;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f0\fs30 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 // Course Notes:\cf4 \cb1 \strokec4 \
+\cb3 document.\cf5 \strokec5 getElementById\cf4 \strokec4 (\cf6 \strokec6 "lesson"\cf4 \strokec4 ).innerHTML \cf7 \strokec7 =\cf4 \strokec4  \cf6 \strokec6 `\cf4 \cb1 \strokec4 \
+\cf6 \cb3 \strokec6 Object Constructors in JavaScript \cf4 \cb1 \strokec4 \
+\
+\cf6 \cb3 \strokec6 Sometimes we need a "blueprint" for creating many objects of the same "type".\cf4 \cb1 \strokec4 \
+\
+\cf6 \cb3 \strokec6 The way to create an "object type", is to use an object constructor function.\cf4 \cb1 \strokec4 \
+\
+\cf6 \cb3 \strokec6 The this keyword in JavaScript is the object that 'owns' the code. \cf4 \cb1 \strokec4 \
+\
+\cf6 \cb3 \strokec6 Example 1: Object Constructor Function\cf4 \cb1 \strokec4 \
+\
+\cf6 \cb3 \strokec6 `\cf4 \strokec4 ;\cb1 \
+\
+\cf2 \cb3 \strokec2 // Code Examples:\cf4 \cb1 \strokec4 \
+\
+\cf2 \cb3 \strokec2 // Example 1: Object Constructor Function\cf4 \cb1 \strokec4 \
+\
+
+\f1\i \cf8 \cb3 \strokec8 function
+\f0\i0 \cf4 \strokec4  \cf5 \strokec5 Cyborg\cf4 \strokec4 (
+\f1\i \cf9 \strokec9 _first
+\f0\i0 \cf4 \strokec4 , 
+\f1\i \cf9 \strokec9 _last
+\f0\i0 \cf4 \strokec4 , 
+\f1\i \cf9 \strokec9 _age
+\f0\i0 \cf4 \strokec4 , 
+\f1\i \cf9 \strokec9 _eyes
+\f0\i0 \cf4 \strokec4 , 
+\f1\i \cf9 \strokec9 _invisibilityMode
+\f0\i0 \cf4 \strokec4 ) \{\cb1 \
+\cb3   this.firstName \cf7 \strokec7 =\cf4 \strokec4  _first;\cb1 \
+\cb3   this.lastName \cf7 \strokec7 =\cf4 \strokec4  _last;\cb1 \
+\cb3   this.age \cf7 \strokec7 =\cf4 \strokec4  _age;\cb1 \
+\cb3   this.eyes \cf7 \strokec7 =\cf4 \strokec4  _eyes;\cb1 \
+\cb3   this.invisibilityMode \cf7 \strokec7 =\cf4 \strokec4  _invisibilityMode;\cb1 \
+\cb3 \}\cb1 \
+\
+
+\f1\i \cf8 \cb3 \strokec8 console
+\f0\i0 \cf4 \strokec4 .\cf8 \strokec8 log\cf4 \strokec4 (\cb1 \
+\cb3   \cf6 \strokec6 "Example 1:"\cf4 \strokec4 ,\cb1 \
+\cb3   \cf7 \strokec7 new\cf4 \strokec4  \cf10 \ul \ulc10 \strokec10 Cyborg\cf4 \ulnone \strokec4 (\cf6 \strokec6 "Hans"\cf4 \strokec4 , \cf6 \strokec6 "Solo"\cf4 \strokec4 , \cf11 \strokec11 300\cf4 \strokec4 , \cf6 \strokec6 "auburn"\cf4 \strokec4 , \cf11 \strokec11 true\cf4 \strokec4 ),\cb1 \
+\cb3   \cf7 \strokec7 new\cf4 \strokec4  \cf10 \ul \ulc10 \strokec10 Cyborg\cf4 \ulnone \strokec4 (\cf6 \strokec6 "Hans"\cf4 \strokec4 , \cf6 \strokec6 "Solo"\cf4 \strokec4 , \cf11 \strokec11 300\cf4 \strokec4 , \cf6 \strokec6 "auburn"\cf4 \strokec4 , \cf11 \strokec11 true\cf4 \strokec4 ),\cb1 \
+\cb3   \cf7 \strokec7 new\cf4 \strokec4  \cf10 \ul \ulc10 \strokec10 Cyborg\cf4 \ulnone \strokec4 (\cf6 \strokec6 "Hans"\cf4 \strokec4 , \cf6 \strokec6 "Solo"\cf4 \strokec4 , \cf11 \strokec11 300\cf4 \strokec4 , \cf6 \strokec6 "auburn"\cf4 \strokec4 , \cf11 \strokec11 true\cf4 \strokec4 ),\cb1 \
+\cb3   \cf7 \strokec7 new\cf4 \strokec4  \cf10 \ul \ulc10 \strokec10 Cyborg\cf4 \ulnone \strokec4 (\cf6 \strokec6 "Hans"\cf4 \strokec4 , \cf6 \strokec6 "Solo"\cf4 \strokec4 , \cf11 \strokec11 300\cf4 \strokec4 , \cf6 \strokec6 "auburn"\cf4 \strokec4 , \cf11 \strokec11 true\cf4 \strokec4 ),\cb1 \
+\cb3   \cf7 \strokec7 new\cf4 \strokec4  \cf10 \ul \ulc10 \strokec10 Cyborg\cf4 \ulnone \strokec4 (\cf6 \strokec6 "Hans"\cf4 \strokec4 , \cf6 \strokec6 "Solo"\cf4 \strokec4 , \cf11 \strokec11 300\cf4 \strokec4 , \cf6 \strokec6 "auburn"\cf4 \strokec4 , \cf11 \strokec11 true\cf4 \strokec4 ),\cb1 \
+\cb3   \cf7 \strokec7 new\cf4 \strokec4  \cf10 \ul \ulc10 \strokec10 Cyborg\cf4 \ulnone \strokec4 (\cf6 \strokec6 "Hans"\cf4 \strokec4 , \cf6 \strokec6 "Solo"\cf4 \strokec4 , \cf11 \strokec11 300\cf4 \strokec4 , \cf6 \strokec6 "auburn"\cf4 \strokec4 , \cf11 \strokec11 true\cf4 \strokec4 ),\cb1 \
+\cb3   \cf7 \strokec7 new\cf4 \strokec4  \cf10 \ul \ulc10 \strokec10 Cyborg\cf4 \ulnone \strokec4 (\cf6 \strokec6 "Hans"\cf4 \strokec4 , \cf6 \strokec6 "Solo"\cf4 \strokec4 , \cf11 \strokec11 300\cf4 \strokec4 , \cf6 \strokec6 "auburn"\cf4 \strokec4 , \cf11 \strokec11 true\cf4 \strokec4 ),\cb1 \
+\cb3   \cf7 \strokec7 new\cf4 \strokec4  \cf10 \ul \ulc10 \strokec10 Cyborg\cf4 \ulnone \strokec4 (\cf6 \strokec6 "Hans"\cf4 \strokec4 , \cf6 \strokec6 "Solo"\cf4 \strokec4 , \cf11 \strokec11 300\cf4 \strokec4 , \cf6 \strokec6 "auburn"\cf4 \strokec4 , \cf11 \strokec11 true\cf4 \strokec4 ),\cb1 \
+\cb3   \cf7 \strokec7 new\cf4 \strokec4  \cf10 \ul \ulc10 \strokec10 Cyborg\cf4 \ulnone \strokec4 (\cf6 \strokec6 "Hans"\cf4 \strokec4 , \cf6 \strokec6 "Solo"\cf4 \strokec4 , \cf11 \strokec11 300\cf4 \strokec4 , \cf6 \strokec6 "auburn"\cf4 \strokec4 , \cf11 \strokec11 true\cf4 \strokec4 ),\cb1 \
+\cb3   \cf7 \strokec7 new\cf4 \strokec4  \cf10 \ul \ulc10 \strokec10 Cyborg\cf4 \ulnone \strokec4 (\cf6 \strokec6 "Hans"\cf4 \strokec4 , \cf6 \strokec6 "Solo"\cf4 \strokec4 , \cf11 \strokec11 300\cf4 \strokec4 , \cf6 \strokec6 "auburn"\cf4 \strokec4 , \cf11 \strokec11 true\cf4 \strokec4 ),\cb1 \
+\cb3   \cf7 \strokec7 new\cf4 \strokec4  \cf10 \ul \ulc10 \strokec10 Cyborg\cf4 \ulnone \strokec4 (\cf6 \strokec6 "Hans"\cf4 \strokec4 , \cf6 \strokec6 "Quatro"\cf4 \strokec4 , \cf11 \strokec11 299.999999999\cf4 \strokec4 , \cf6 \strokec6 "black"\cf4 \strokec4 , \cf11 \strokec11 true\cf4 \strokec4 )\cb1 \
+\cb3 );\cb1 \
+\
+\cf2 \cb3 \strokec2 // Exercise\cf4 \cb1 \strokec4 \
+\cb3 document.\cf5 \strokec5 getElementById\cf4 \strokec4 (\cf6 \strokec6 "exercise"\cf4 \strokec4 ).innerHTML \cf7 \strokec7 =\cf4 \strokec4  \cf6 \strokec6 `\cf4 \cb1 \strokec4 \
+\cf6 \cb3 \strokec6 Exercise: Uber Eats Payment Database\cf4 \cb1 \strokec4 \
+\
+\cf6 \cb3 \strokec6 You are building a CMS frontend payment database for Uber Eats. \cf4 \cb1 \strokec4 \
+\cf6 \cb3 \strokec6 The higherups ask you to build an object constructor to generate user object data\cf4 \cb1 \strokec4 \
+\cf6 \cb3 \strokec6 called userGenerator.\cf4 \cb1 \strokec4 \
+\
+\cf6 \cb3 \strokec6 1. The blueprint of the object should have keys for the full name (first and last),\cf4 \cb1 \strokec4 \
+\cf6 \cb3 \strokec6 location, and billing.  The data should include an entire name \cf4 \cb1 \strokec4 \
+\cf6 \cb3 \strokec6 (first name and last name), address, and billing information.\cf4 \cb1 \strokec4 \
+\
+\cf6 \cb3 \strokec6 2. Create four new user objects with userGenerator \cf4 \cb1 \strokec4 \
+\cf6 \cb3 \strokec6 with the following string information passed as arguments \cf4 \cb1 \strokec4 \
+\cf6 \cb3 \strokec6 (entireName, address, billing):\cf4 \cb1 \strokec4 \
+\
+\cf6 \cb3 \strokec6 user1: Lisa Simpson, Carribeans, Mastercard\cf4 \cb1 \strokec4 \
+\cf6 \cb3 \strokec6 user2: Michael Jordan, Chicago, Visa\cf4 \cb1 \strokec4 \
+\cf6 \cb3 \strokec6 user3: Bunny Foofoo, Canada, null\cf4 \cb1 \strokec4 \
+\cf6 \cb3 \strokec6 user4: The Dude, LA, Ethereum \cf4 \cb1 \strokec4 \
+\
+\cf6 \cb3 \strokec6 3. Store the user objects of only the users that have filled out valid billing information\cf4 \cb1 \strokec4 \
+\cf6 \cb3 \strokec6 (vaild billing methods can only include Visa or Ethereum) in an array payingUsersDatabase.\cf4 \cb1 \strokec4 \
+\
+\cf6 \cb3 \strokec6 4. Console log a message displaying how many total users there are being\cf4 \cb1 \strokec4 \
+\cf6 \cb3 \strokec6 generated, how many users with valid billing there are, \cf4 \cb1 \strokec4 \
+\cf6 \cb3 \strokec6 and all the data of only the users with valid billing.\cf4 \cb1 \strokec4 \
+\
+\cf6 \cb3 \strokec6 5. Share your solution on the discord and break a leg! `\cf4 \strokec4 ;\cb1 \
+\
+\cf2 \cb3 \strokec2 // Exercise Solution:\cf4 \cb1 \strokec4 \
+\
+
+\f1\i \cf8 \cb3 \strokec8 var
+\f0\i0 \cf4 \strokec4  \cf5 \strokec5 UserGenerator\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  
+\f1\i \cf8 \strokec8 function
+\f0\i0 \cf4 \strokec4  (
+\f1\i \cf9 \strokec9 entireName
+\f0\i0 \cf4 \strokec4 , 
+\f1\i \cf9 \strokec9 location
+\f0\i0 \cf4 \strokec4 , 
+\f1\i \cf9 \strokec9 billing
+\f0\i0 \cf4 \strokec4 ) \{\cb1 \
+\cb3   this.fullName \cf7 \strokec7 =\cf4 \strokec4  entireName;\cb1 \
+\cb3   this.location \cf7 \strokec7 =\cf4 \strokec4  location;\cb1 \
+\cb3   this.billing \cf7 \strokec7 =\cf4 \strokec4  billing;\cb1 \
+\cb3 \};\cb1 \
+\
+\
+
+\f1\i \cf8 \cb3 \strokec8 let
+\f0\i0 \cf4 \strokec4  payingUsersDatabase \cf7 \strokec7 =\cf4 \strokec4  [];\cb1 \
+
+\f1\i \cf8 \cb3 \strokec8 let
+\f0\i0 \cf4 \strokec4  eachUserObj \cf7 \strokec7 =\cf4 \strokec4  [];\cb1 \
+
+\f1\i \cf8 \cb3 \strokec8 let
+\f0\i0 \cf4 \strokec4  totalPaymentUsers \cf7 \strokec7 =\cf4 \strokec4  \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
+\
+
+\f1\i \cf8 \cb3 \strokec8 function
+\f0\i0 \cf4 \strokec4  \cf5 \strokec5 createNewUser\cf4 \strokec4 (
+\f1\i \cf9 \strokec9 name
+\f0\i0 \cf4 \strokec4 , 
+\f1\i \cf9 \strokec9 address
+\f0\i0 \cf4 \strokec4 , 
+\f1\i \cf9 \strokec9 card
+\f0\i0 \cf4 \strokec4 ) \{\cb1 \
+\cb3   eachUserObj.\cf5 \strokec5 push\cf4 \strokec4 (\cf7 \strokec7 new\cf4 \strokec4  \cf10 \ul \ulc10 \strokec10 UserGenerator\cf4 \ulnone \strokec4 (name, address, card));\cb1 \
+\cb3   \cf5 \strokec5 addNewPaymentUsers\cf4 \strokec4 ();\cb1 \
+\cb3 \}\cb1 \
+\
+\cf5 \cb3 \strokec5 createNewUser\cf4 \strokec4 (\cf6 \strokec6 "Lisa Simpson"\cf4 \strokec4 , \cf6 \strokec6 "Carribeans"\cf4 \strokec4 , \cf6 \strokec6 "Mastercard"\cf4 \strokec4 );\cb1 \
+\cf5 \cb3 \strokec5 createNewUser\cf4 \strokec4 (\cf6 \strokec6 "Michael Jordan"\cf4 \strokec4 , \cf6 \strokec6 "Chicago"\cf4 \strokec4 , \cf6 \strokec6 "Visa"\cf4 \strokec4 );\cb1 \
+\cf5 \cb3 \strokec5 createNewUser\cf4 \strokec4 (\cf6 \strokec6 "Bunny Foofoo"\cf4 \strokec4 , \cf6 \strokec6 "Canada"\cf4 \strokec4 , \cf11 \strokec11 null\cf4 \strokec4 );\cb1 \
+\cf5 \cb3 \strokec5 createNewUser\cf4 \strokec4 (\cf6 \strokec6 "The Dude"\cf4 \strokec4 , \cf6 \strokec6 "LA"\cf4 \strokec4 , \cf6 \strokec6 "Ethereum"\cf4 \strokec4 );\cb1 \
+\
+
+\f1\i \cf8 \cb3 \strokec8 console
+\f0\i0 \cf4 \strokec4 .\cf8 \strokec8 log\cf4 \strokec4 (eachUserObj[\cf11 \strokec11 0\cf4 \strokec4 ].location);\cb1 \
+\
+
+\f1\i \cf8 \cb3 \strokec8 function
+\f0\i0 \cf4 \strokec4  \cf5 \strokec5 addNewPaymentUsers\cf4 \strokec4 () \{\cb1 \
+\cb3   
+\f1\i \cf8 \strokec8 let
+\f0\i0 \cf4 \strokec4  newObjData \cf7 \strokec7 =\cf4 \strokec4  \{\};\cb1 \
+\cb3   \cf7 \strokec7 for\cf4 \strokec4  (
+\f1\i \cf8 \strokec8 let
+\f0\i0 \cf4 \strokec4  i \cf7 \strokec7 =\cf4 \strokec4  \cf11 \strokec11 0\cf4 \strokec4 ; i \cf7 \strokec7 <\cf4 \strokec4  eachUserObj.length; i\cf7 \strokec7 ++\cf4 \strokec4 ) \{\cb1 \
+\cb3     newObjData.name \cf7 \strokec7 =\cf4 \strokec4  eachUserObj[i].fullName;\cb1 \
+\cb3     newObjData.address \cf7 \strokec7 =\cf4 \strokec4  eachUserObj[i].location;\cb1 \
+\cb3     newObjData.billing \cf7 \strokec7 =\cf4 \strokec4  eachUserObj[i].billing;\cb1 \
+\cb3   \}\cb1 \
+\cb3   
+\f1\i \cf8 \strokec8 let
+\f0\i0 \cf4 \strokec4  billingExists \cf7 \strokec7 =\cf4 \strokec4  newObjData.billing;\cb1 \
+\cb3   \cf7 \strokec7 if\cf4 \strokec4  (billingExists)\cb1 \
+\cb3     \cf7 \strokec7 if\cf4 \strokec4  (billingExists \cf7 \strokec7 ===\cf4 \strokec4  \cf6 \strokec6 "Visa"\cf4 \strokec4  \cf7 \strokec7 ||\cf4 \strokec4  billingExists \cf7 \strokec7 ===\cf4 \strokec4  \cf6 \strokec6 "Ethereum"\cf4 \strokec4 ) \{\cb1 \
+\cb3       totalPaymentUsers\cf7 \strokec7 ++\cf4 \strokec4 ;\cb1 \
+\cb3       \cf7 \strokec7 return\cf4 \strokec4  payingUsersDatabase.\cf5 \strokec5 push\cf4 \strokec4 (newObjData);\cb1 \
+\cb3     \}\cb1 \
+\cb3 \}\cb1 \
+\
+
+\f1\i \cf8 \cb3 \strokec8 console
+\f0\i0 \cf4 \strokec4 .\cf8 \strokec8 log\cf4 \strokec4 (\cb1 \
+\cb3   \cf6 \strokec6 "Exercise Solution:"\cf4 \strokec4 ,\cb1 \
+\cb3   \cf6 \strokec6 `You currently have a total of $\{\cf12 \strokec12 eachUserObj.length\cf6 \strokec6 \} users of which\cf4 \cb1 \strokec4 \
+\cf6 \cb3 \strokec6   $\{\cf12 \strokec12 totalPaymentUsers\cf6 \strokec6 \} users have valid payment methods`\cf4 \strokec4 ,\cb1 \
+\cb3   payingUsersDatabase\cb1 \
+\cb3 );\cb1 \
+\
+\cf2 \cb3 \strokec2 //name, address, billing information\cf4 \cb1 \strokec4 \
+\
+}
